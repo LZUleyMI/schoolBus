@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry
+		location="D:\Program Files\apache-maven-3.3.3\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+
+	<context id="context1" targetRuntime="MyBatis3">
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/school_bus" userId="root"
+			password="" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="cn.edu.suda.schoolBus.bean"
+			targetProject="./src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="mybatis"
+			targetProject="./src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="cn.edu.suda.schoolBus.dao"
+			targetProject="./src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table schema="school_bus" tableName="admin_user" />
+		<table schema="school_bus" tableName="appointment" />
+		<table schema="school_bus" tableName="car_number" />
+		<table schema="school_bus" tableName="departure_info" />
+		<table schema="school_bus" tableName="driver" />
+		<table schema="school_bus" tableName="dynamic_car_number" />
+		<table schema="school_bus" tableName="passenger" />
+		<table schema="school_bus" tableName="school_bus" />
+	</context>
+</generatorConfiguration>
