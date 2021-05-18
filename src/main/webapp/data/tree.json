@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "text": "校车管理",
+    "state": "open",
+    "attributes": {
+    	"url": "/schoolBus/schoolBusManagement"
+    }
+},{
+    "id": 2,
+    "text": "司机管理",
+    "state": "open",
+    "attributes": {
+    	"url": "/schoolBus/driverManagement"
+    }
+},{
+    "id": 3,
+    "text": "车次管理",
+    "state": "open",
+    "attributes": {
+    	"url": "/schoolBus/carNumberManagement"
+    }
+},{
+    "id": 4,
+    "text": "管理员管理",
+    "state": "open",
+    "attributes": {
+    	"url": "/schoolBus/managerManagement"
+    }
+}]
