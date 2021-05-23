@@ -5,6 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-车次管理
+	<div id="cnManagementDg"></div>
+
+	<div id="cnManageMentDl">
+		<form id="sbManagementForm" method="POST">
+			<table>
+				<tr>
+					<td>发车地点</td>
+					<td><input class="easyui-textbox" name=""></td>
+				</tr>
+				<tr>
+					<td>发车时间</td>
+					<td><input class="easyui-textbox" name=""></td>
+				</tr>
+				<tr>
+					<td colspan=2><p>时间填写格式如：<span>18:08:08</span></p></td>
+				</tr>
+				<tr>
+					<td>车次状态</td>
+					<td><label><input id="cnStatusFree" type="radio"
+							name="cnStatus">空闲</label><label><input
+							id="cnStatusNotFree" type="radio" name="cnStatus">不空闲</label></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="js/m_cnManagement.js"></script>
 </body>
 </html>
