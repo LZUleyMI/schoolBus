@@ -55,13 +55,25 @@ function add() {
 			text : '保存',
 			iconCls : 'icon-save',
 			handler : function() {
-
+				$('#dManageMentDl').dialog('close');
+				$.messager.show({
+					title : '添加',
+					msg : '成功添加司机。',
+					timeout : 3000,
+					showType : 'slide'
+				});
 			}
 		}, {
 			text : '取消',
 			iconCls : 'icon-cancel',
 			handler : function() {
 				$('#dManageMentDl').dialog('close');
+				$.messager.show({
+					title : '添加',
+					msg : '取消添加司机。',
+					timeout : 3000,
+					showType : 'slide'
+				});
 			}
 		} ]
 	});
@@ -76,13 +88,25 @@ function edit() {
 			text : '保存',
 			iconCls : 'icon-edit',
 			handler : function() {
-
+				$('#dManageMentDl').dialog('close');
+				$.messager.show({
+					title : '编辑',
+					msg : '成功编辑司机。',
+					timeout : 3000,
+					showType : 'slide'
+				});
 			}
 		}, {
 			text : '取消',
 			iconCls : 'icon-cancel',
 			handler : function() {
 				$('#dManageMentDl').dialog('close');
+				$.messager.show({
+					title : '编辑',
+					msg : '取消编辑司机。',
+					timeout : 3000,
+					showType : 'slide'
+				});
 			}
 		} ]
 	});
@@ -90,5 +114,20 @@ function edit() {
 
 function remove() {
 	$.messager.confirm('删除司机', '确定删除么？', function(r) {
+		if (r) {
+			$.messager.show({
+				title : '删除',
+				msg : '成功删除司机。',
+				timeout : 3000,
+				showType : 'slide'
+			});
+		} else {
+			$.messager.show({
+				title : '删除',
+				msg : '取消删除司机。',
+				timeout : 3000,
+				showType : 'slide'
+			});
+		}
 	});
 }
