@@ -1,3 +1,9 @@
+$(function() {
+	setInterval(function() {
+		$("#currentTime").text(new Date().toLocaleString());
+	}, 1000);
+});
+
 $('#schoolBusTree').tree({
 	url : 'data/tree.json',
 	onClick : function(node) {
@@ -18,6 +24,6 @@ $('#homeContent').tabs({
 });
 $('#homeContent').tabs('add', {
 	title : '首页',
-	content : '<h1>欢迎来到我的世界！</h1>',
+	href : '/schoolBus/dynamicCarNumberMg',
 	closable : false
 });
